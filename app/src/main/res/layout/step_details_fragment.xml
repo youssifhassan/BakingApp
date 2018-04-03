@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.android.bakingapp.Fragment.StepDetails">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarId"
+        android:layout_width="match_parent"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:title="@string/go_back"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="#FFFFFF" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/no_video"
+           android:visibility="invisible"
+           android:id="@+id/gone"
+           android:textColor="#9f9f9f"
+           android:fontFamily="serif"
+           android:padding="5dp"
+           android:textStyle="bold"
+           android:textSize="15sp"/>
+
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/step_full_desc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Desc Goes Here"
+        android:layout_weight="1"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:background="#58b6ec"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/thumb"
+        android:src="@drawable/placeholder"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
